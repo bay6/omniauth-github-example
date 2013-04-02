@@ -1,4 +1,7 @@
 %h1 Log In
+- if flash[:notice]
+  .error_messages
+    = flash[:notice]
 = form_tag sessions_path do
   .field
     = label_tag :email
