@@ -7,6 +7,7 @@ Crm::Application.routes.draw do
   resources :sessions
   resources :users
   match 'auth/:provider/callback', to: 'sessions#create_github'
+  match 'auth/failure', to: redirect('/')
 
 
   # The priority is based upon order of creation:
