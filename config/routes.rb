@@ -6,6 +6,7 @@ Crm::Application.routes.draw do
   resources :clients
   resources :sessions
   resources :users
+  match 'auth/:provider/callback', to: 'sessions#create_github'
 
 
   # The priority is based upon order of creation:
