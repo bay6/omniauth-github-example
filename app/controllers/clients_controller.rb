@@ -1,4 +1,5 @@
 class ClientsController < ApplicationController
+  before_filter :authorize, only: [:destroy, :create, :edit, :update]
   # GET /clients
   # GET /clients.json
   def index
