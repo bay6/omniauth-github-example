@@ -8,10 +8,13 @@ This project will simply show how to use omniauth login github, currently rails 
 ##How to use
 ```ruby
 bundle
+bundle exec rake db:migrate
 rails s
 ```
 
 ## Demonstration of usage
+
+http://github-ominiauth.herokuapp.com
 
 ## feedback
 Anything you found, just let me know. 
