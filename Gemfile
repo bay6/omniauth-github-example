@@ -6,7 +6,6 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: [:production]
 gem 'haml-rails'
 gem 'bcrypt-ruby'
 gem 'omniauth-github'
@@ -33,7 +32,10 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-gem 'unicorn', group: [:production]
+group :production do
+  'unicorn'
+  'pg'
+end
 
 # Deploy with Capistrano
 # gem 'capistrano'
