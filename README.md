@@ -16,5 +16,11 @@ rails s
 
 http://github-ominiauth.herokuapp.com
 
-## feedback
+## Feedback
 Anything you found, just let me know. 
+
+## References
+
+* **Code Style**
+    1. [Ruby Style Guide](https://github.com/JuanitoFatas/ruby-style-guide)
+    2. [Rails Style Guide](https://github.com/JuanitoFatas/rails-style-guide)
