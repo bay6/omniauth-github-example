@@ -1,0 +1,153 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-22 08:10:59 -0400
+Processing by ClientsController#index as HTML
+Completed 500 Internal Server Error in 32ms
+
+ActiveRecord::StatementInvalid (Could not find table 'clients'):
+  app/controllers/clients_controller.rb:6:in `index'
+
+
+  Rendered /Users/kenlu/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/kenlu/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/kenlu/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.7ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130402032957)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130402032957')[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to CreateClients (20130402034856)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "age" integer, "address" varchar(255), "date_of_birth" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130402034856')[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to AddProviderInfoToUser (20130402124724)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "provider" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "uid" varchar(255)[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD "name" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130402124724')[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-22 08:11:24 -0400
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT "clients".* FROM "clients" [0m
+  Rendered clients/index.html.haml within layouts/application (5.4ms)
+Compiled clients.css  (11ms)  (pid 1651)
+Compiled scaffolds.css  (12ms)  (pid 1651)
+Compiled sessions.css  (2ms)  (pid 1651)
+Compiled users.css  (1ms)  (pid 1651)
+Compiled application.css  (75ms)  (pid 1651)
+Compiled jquery.js  (2ms)  (pid 1651)
+Compiled jquery_ujs.js  (0ms)  (pid 1651)
+Compiled clients.js  (96ms)  (pid 1651)
+Compiled sessions.js  (64ms)  (pid 1651)
+Compiled users.js  (84ms)  (pid 1651)
+Compiled application.js  (294ms)  (pid 1651)
+Completed 200 OK in 546ms (Views: 509.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /clients.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /sessions.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /clients.js - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /sessions.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /users.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 08:11:25 -0400
+Served asset /application.js - 200 OK (32ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-22 08:11:31 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-06-22 08:11:37 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tSoEk48x4kRtDVsHwY4whlpyQQyT+ZJeqxDoLjB1AG8=", "email"=>"ken@seeice.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'ken@seeice.com' LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 43ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2013-06-22 08:11:37 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2013-06-22 08:11:39 -0400
+(github) Request phase initiated.
+
+
+Started GET "/auth/github/callback?code=d33d2feed7623a0040b2&state=5290b28a0f69d0f364edbe6eb498bb33cf1b5186c6ab7340" for 127.0.0.1 at 2013-06-22 08:11:39 -0400
+(github) Callback phase initiated.
+Processing by SessionsController#create_github as HTML
+  Parameters: {"code"=>"d33d2feed7623a0040b2", "state"=>"5290b28a0f69d0f364edbe6eb498bb33cf1b5186c6ab7340", "provider"=>"github"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'github' AND "users"."uid" = '83296' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 22 Jun 2013 12:11:40 UTC +00:00], ["email", "ken@yankist.com"], ["name", "hlee"], ["password_digest", nil], ["provider", "github"], ["uid", "83296"], ["updated_at", Sat, 22 Jun 2013 12:11:40 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-22 08:11:40 -0400
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT "clients".* FROM "clients" [0m
+  Rendered clients/index.html.haml within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2013-06-22 08:11:47 -0400
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.haml (16.4ms)
+  Rendered clients/new.html.haml within layouts/application (21.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 83ms (Views: 76.4ms | ActiveRecord: 0.1ms)
+Connecting to database specified by database.yml
