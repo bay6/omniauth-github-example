@@ -11,7 +11,12 @@
     <div class="navbar-inner">
       <div class="container">
         <div class="user-nav pull-right">
-          <%= link_to "Github Login", "/auth/github" %>
+          <% if current_user %>
+            Welcome <%= current_user.nickname %>!
+            <%= link_to "Sign out", signout_path %>
+          <% else %>
+            <%= link_to "Github Login", "/auth/github" %>
+          <% end %>
         </div>
       </div>
     </div>
