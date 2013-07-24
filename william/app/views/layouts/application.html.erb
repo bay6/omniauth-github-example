@@ -10,11 +10,20 @@
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
+        <div class="user-nav pull-right">
+          <%= link_to "Github Login", "/auth/github" %>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="container">
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+        <a class="close" data-dismiss="alert">x</a>
+        <%= msg  %>
+      </div>
+    <% end %>
     <%= yield %>
   </div>
 

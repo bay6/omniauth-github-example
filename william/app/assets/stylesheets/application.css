@@ -15,4 +15,9 @@
 
 .navbar-fixed-top {
   position: static;
+  margin-bottom: 20px;
+}
+
+.user-nav {
+  line-height: 40px;
 }
