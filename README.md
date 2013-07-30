@@ -24,3 +24,6 @@ Anything you found, just let me know.
 * **Code Style**
     1. [Ruby Style Guide](https://github.com/JuanitoFatas/ruby-style-guide)
     2. [Rails Style Guide](https://github.com/JuanitoFatas/rails-style-guide)
+
+* **Blogs**
+    1. [omniauth-github使用示例](http://williamherry.com/blog/2013/07/29/omniauth-github-demo/)
