@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Py890000</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if logged_in? %>
+    login in as <%= current_user.name%>,<%= current_user.email %>
+    <%= link_to "logged out", signout_path%>
+ <%  else %>
+    <%= link_to "Sign with github",'/auth/github'%>
+    <%= link_to "Sign up",signup_path %> or
+    <%= link_to "log In", login_path %>
+  <%  end %>  
+<%= yield %>
+
+</body>
+</html>
