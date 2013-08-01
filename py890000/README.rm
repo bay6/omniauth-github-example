@@ -1,0 +1,12 @@
+##已经实现如下功能:
+
+1.用户登录,
+2.注册,
+3.退出
+4.从github  登录 
+
+##怎么使用:
+bundle 
+bundle exec rake db:migrate
+rails s
+
